@@ -36,33 +36,34 @@
 </head>
 
 <body>
-                <!-- Work in Progress Bar -->
-                <div class="work-in-progress">
-                    <span>Building in progress – one rep at a time!</span>
-                    <img src="https://cdn.pixabay.com/photo/2020/05/04/01/37/dumbbell-5127417_1280.png" alt="Loading..."
-                        class="loading-icon">
-                </div>
-            <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">X-Fit</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutUs.html">AboutUs</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#about">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#about">How It Works</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="index.html#signup"><b>Sign Up</b></a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
-            </ul>
+        <!-- Work in Progress Bar -->
+        <div class="work-in-progress">
+            <span>Building in progress – one rep at a time!</span>
+            <img src="https://cdn.pixabay.com/photo/2020/05/04/01/37/dumbbell-5127417_1280.png" alt="Loading..."
+                class="loading-icon">
         </div>
-
+        <!-- NavBar -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#"><img src="static/images/xfit.jpg" alt="XFit Logo" /></a></div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#signup" class="dropdown">Explore Our Category <i class="fas fa-chevron-down"></i></a>
+                <a href="#signup" class="list-gym">List Your Gym <i class="fas fa-plus"></i></a>
+                <a href="#signup">Why X-Fit</a>
+                <a href="#signup">Contact</a>
+                <a href="#signup">About</a>
+                <a href="#signup">Login</a>
+                <a href="#signup" class="signup">Sign Up</a>
+            </div>
+            </div>
     </header>
 
     <section class="hero-section">
-        <h1>The Future of Fitness, Coming Soon!</h1>
+        <h1>The Future of Fitness, Get Ready – Coming This Summer!</h1>
         <a href="#signup" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Early Access</a>
     </section>
 
@@ -165,13 +166,19 @@
         <div>
             <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
         </div>
-        <p class="timer">Live in: 30 days</p>
-        <p class="neon-sign">Live in: 30 days</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
 
     <script>
         // Function to toggle the "Other" text input visibility
