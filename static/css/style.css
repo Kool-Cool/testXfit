@@ -285,30 +285,80 @@ body {
     margin: 0 10px;
 }
 
-.email-signup {
-    background-color: #f7f7f7;
-    padding: 60px 0;
+/* form */
+/* .container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+.container h2 {
+    margin-top: 0;
+    font-size: 24px;
+} */
+
+
+#signup {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Ensure the section takes full viewport height */
+    padding: 0 20px; /* Add padding on the sides for some spacing */
 }
 
-.form-control {
-    max-width: 400px;
+.form-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
     width: 100%;
+    max-width: 600px; /* Set a maximum width to prevent form from being too wide */
+    box-sizing: border-box;
+    margin-top: 20px; /* Add some space above the form */
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
-.btn-primary {
-    padding: 12px 40px;
-    font-size: 1.2rem;
-    border-radius: 50px;
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .error {
     color: red;
-    font-size: 0.875rem;
+    font-size: 12px;
 }
+
+
+
+
 
 @media (max-width: 767px) {
     .hero-section h1 {

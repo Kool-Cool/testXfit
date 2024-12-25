@@ -123,22 +123,25 @@
     </section>
 
     <section class="section-padding" id="signup">
-        <div class="container text-center">
-            <h2>Be the First to Experience X-Fit!</h2>
-            <div class="form-container" style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9;">
-                <form id="signupForm" class=" d-flex flex-column justify-content-center align-items-center" method="post" action="">
-                    <div class="form-group justify-content-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-center">Be the First to Experience X-Fit!</h2>
+            <div class="form-container">
+                <form id="signupForm" method="post" action="">
+                    <div class="form-group">
+                        <label for="source">You Name?</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
+                        <label for="source">You email?</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                         <div id="emailError" class="error"></div>
                     </div>
                     <div class="form-group">
+                        <label for="source">You whatsapp number?</label>
                         <input type="tel" class="form-control" name="whatsapp" id="whatsapp" placeholder="Enter your WhatsApp number" required>
                         <div id="phoneError" class="error"></div>
                     </div>
-
+    
                     <!-- New Textbox with Question -->
                     <div class="form-group">
                         <label for="source">Where did you hear about us?</label>
@@ -149,18 +152,19 @@
                             <option value="other">Other</option>
                         </select>
                     </div>
-
+    
                     <div class="form-group" id="otherField" style="display: none;">
                         <input type="text" class="form-control" name="other_source" id="other_source" placeholder="Please specify">
                     </div>
-
+    
                     <input type="hidden" id="date" name="date">
                     <button type="submit" class="btn btn-primary" id="submitBtn">Sign Up Now!</button>
                 </form>
             </div>
         </div>
     </section>
-    
+
+
     <footer class="footer">
         <div class="left">
             <img alt="X-Fit logo" src="static/images/xfit.jpg" />
