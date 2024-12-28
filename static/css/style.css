@@ -306,6 +306,9 @@ body {
     align-items: center; /* Center the content vertically */
     height: 100vh; /* Ensure the section takes full viewport height */
     padding: 0 20px; /* Add padding on the sides for some spacing */
+    background-color: #000;
+    color: white;
+
 }
 
 .form-container {
@@ -317,6 +320,7 @@ body {
     max-width: 600px; /* Set a maximum width to prevent form from being too wide */
     box-sizing: border-box;
     margin-top: 20px; /* Add some space above the form */
+
 }
 
 .form-group {
@@ -334,6 +338,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #000;
 }
 
 #submitBtn {
