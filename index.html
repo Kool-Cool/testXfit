@@ -38,7 +38,7 @@
 <body>
         <!-- Work in Progress Bar -->
         <div class="work-in-progress">
-            <span>Building in progress – one rep at a time!</span>
+            <span> Website in progress – one rep at a time!</span>
             <img  src="https://cdn.pixabay.com/photo/2020/05/04/01/37/dumbbell-5127417_1280.png" alt="Loading..."
                 class="loading-icon">
         </div>
@@ -51,8 +51,8 @@
                 </div>
             <div class="nav-links">
                 <a href="#">Home</a>
-                <a href="#signup" class="dropdown">Explore Our Category <i class="fas fa-chevron-down"></i></a>
-                <a href="#signup" class="list-gym">List Your Gym <i class="fas fa-plus"></i></a>
+                <!-- <a href="#signup" class="dropdown">Explore Our Category <i class="fas fa-chevron-down"></i></a> -->
+                <!-- <a href="#signup" class="list-gym">List Your Gym <i class="fas fa-plus"></i></a> -->
                 <a href="#signup">Why X-Fit</a>
                 <a href="#signup">Contact</a>
                 <a href="#signup">About</a>
@@ -63,7 +63,7 @@
     </header>
 
     <section class="hero-section">
-        <h1>The Future of Fitness, Get Ready – Coming This Summer!</h1>
+        <h1>The Future of Fitness – Coming This Summer</h1>
         <a href="#signup" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Early Access</a>
     </section>
 
@@ -180,7 +180,7 @@
                      
                     <!-- New Dropdown for Metro Cities -->
                     <div class="form-group">
-                        <label for="city">Where are you from?</label>
+                        <label for="city">Select your city</label>
                         <select id="city" name="city" class="form-control" required>
                             <option value="ahmedabad">Ahmedabad</option>
                             <option value="bangalore" selected>Bangalore</option>
@@ -227,19 +227,19 @@
             <h3>
                 Gym
             </h3>
-            <a href="#">
+            <a href="#signup">
                 Membership
             </a>
-            <a href="#">
+            <a href="#signup">
                 Contact
             </a>
-            <a href="#">
+            <a href="#signup">
                 Locations
             </a>
-            <a href="#">
+            <a href="#signup">
                 Pricing
             </a>
-            <a href="#">
+            <a href="#signup">
                 Review
             </a>
         </div>
@@ -247,19 +247,19 @@
             <h3>
                 Company
             </h3>
-            <a href="#">
+            <a href="#signup">
                 Why X-Fit
             </a>
-            <a href="#">
+            <a href="#signup">
                 Contact
             </a>
-            <a href="#">
+            <a href="#signup">
                 About
             </a>
-            <a href="#">
+            <a href="#signup">
                 Login
             </a>
-            <a href="#">
+            <a href="#signup">
                 Home
             </a>
         </div>
@@ -267,27 +267,27 @@
             <h3>
                 Follow Us
             </h3>
-            <a href="#">
+            <a href="#signup">
                 <i class="fab fa-facebook">
                 </i>
                 Facebook
             </a>
-            <a href="#">
+            <a href="#signup">
                 <i class="fab fa-instagram">
                 </i>
                 Instagram
             </a>
-            <a href="#">
+            <a href="#signup">
                 <i class="fab fa-twitter">
                 </i>
                 X
             </a>
-            <a href="#">
+            <a href="#signup">
                 <i class="fab fa-linkedin">
                 </i>
                 LinkedIn
             </a>
-            <a href="#">
+            <a href="#signup">
                 <i class="fab fa-youtube">
                 </i>
                 Youtube
@@ -297,13 +297,13 @@
             <p>
                 © 2025 X-Fit All rights reserved.
             </p>
-            <a href="#">
+            <a href="#signup">
                 Privacy Policy
             </a>
-            <a href="#">
+            <a href="#signup">
                 Terms of Service
             </a>
-            <a href="#">
+            <a href="#signup">
                 Cookies Settings
             </a>
         </div>
@@ -321,7 +321,26 @@
     }
 </script>
 
+<script>
+    $(document).ready(function() {
+        // Smooth scrolling for all links with href starting with #
+        $('a[href^="#"]').on('click', function(event) {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
+            // Store hash
+            var target = this.hash;
+
+            // Animate the scroll to the target section
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800, function() {
+                // Update the URL hash without jumping
+                window.location.hash = target;
+            });
+        });
+    });
+</script>
 
 <script>
     // Function to toggle the "Other" text input visibility
