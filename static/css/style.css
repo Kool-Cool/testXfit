@@ -1,7 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 20px; 
+    background-color: #dddada;
 }
 
 /* Work in Progress Bar */
@@ -10,8 +12,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ff9800;
-    color: white;
+    background-color: white;
+    color: #000;
     text-align: center;
     padding: 10px;
     font-size: 1rem;
@@ -24,6 +26,7 @@ body {
     height: 30px;
     animation: spin 2s linear infinite; /* Rotates continuously */
     margin-left: 15px;
+    filter: invert(100%) grayscale(100%) contrast(100%);
 }
 
 @keyframes spin {
@@ -141,7 +144,7 @@ body {
 
 
 .hero-section {
-    background: url("../images/bgimg.jpg") no-repeat center center;
+    background: url("../images/ai-generated-exercise-machines-in-a-gym-free-photo.jpg") no-repeat center center;
     background-size: cover;
     color: white;
     height: 75vh;
@@ -177,7 +180,7 @@ body {
 
 .feature-list ul {
     list-style: none;
-    padding: 0;
+    padding-top: 5px;
 }
 
 .feature-list li {
@@ -185,20 +188,40 @@ body {
 }
 
 .feature-list h4 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-weight: bold;
 }
 
 .feature-list p {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     color: #555;
 }
 
 .feature-list i {
     font-size: 2.5rem;
-    color: #ff9800;
+    color: #000;
     margin-bottom: 15px;
 }
+.card {
+    border: 1px solid #ddd; /* Light gray border around the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between the cards */
+}
+
+.card-body {
+    padding: 20px; /* Add padding inside the card */
+}
+
+.card-title {
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.card-text {
+    color: #555; /* Slightly darker text color for the description */
+}
+
 
 .footer {
     background-color: #333;
@@ -304,8 +327,8 @@ body {
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    height: 100vh; /* Ensure the section takes full viewport height */
-    padding: 0 20px; /* Add padding on the sides for some spacing */
+    /* height: 100vh; Ensure the section takes full viewport height */
+    /* padding: 0 20px; Add padding on the sides for some spacing */
     background-color: #000;
     color: white;
 
@@ -319,7 +342,7 @@ body {
     width: 100%;
     max-width: 600px; /* Set a maximum width to prevent form from being too wide */
     box-sizing: border-box;
-    margin-top: 20px; /* Add some space above the form */
+    /* margin-top: 20px; Add some space above the form */
 
 }
 
