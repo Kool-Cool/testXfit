@@ -166,18 +166,7 @@
                         <input type="tel" class="form-control" name="whatsapp" id="whatsapp" placeholder="Enter your WhatsApp number" required>
                         <div id="phoneError" class="error"></div>
                     </div>
-    
-                    <!-- New Textbox with Question -->
-                    <div class="form-group">
-                        <label for="source">Where did you hear about us?</label>
-                        <select id="source" name="source" class="form-control" required onchange="toggleOtherField()">
-                            <option value="social_media">Social Media</option>
-                            <option value="friend_referral">Friend Referral</option>
-                            <option value="online_ads">Online Ads</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                     
+                    
                     <!-- New Dropdown for Metro Cities -->
                     <div class="form-group">
                         <label for="city">Select your city</label>
@@ -194,6 +183,18 @@
                             <option value="surat">Surat</option>
                         </select>
                     </div>
+    
+                    <!-- New Textbox with Question -->
+                    <div class="form-group">
+                        <label for="source">Where did you hear about us?</label>
+                        <select id="source" name="source" class="form-control" required onchange="toggleOtherField()">
+                            <option value="social_media">Social Media</option>
+                            <option value="friend_referral">Friend Referral</option>
+                            <option value="online_ads">Online Ads</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                     
     
                     <div class="form-group" id="otherField" style="display: none;">
                         <input type="text" class="form-control" name="other_source" id="other_source" placeholder="Please specify">
