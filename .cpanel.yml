@@ -1,0 +1,15 @@
+# .cpanel.yml
+
+deployment:
+  version: 1
+  app: myapp
+  web:
+    document_root: /public_html
+    files:
+      - static/
+      - aboutUs.html
+      - blog.html
+      - index.html
+      - mailBody.html
+
+# Additional optional deployment settings can go here
