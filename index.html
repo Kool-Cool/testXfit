@@ -323,8 +323,51 @@
         navLinks.classList.toggle('active');
         navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
     }
-</script>
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
 
+        // Check if the click was outside the nav links and hamburger
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+            navLinks.classList.remove('active');
+            navLinks.style.display = 'none';
+        }
+    });
+</script>
+<!-- <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+
+        // If the menu is active, set display to flex immediately
+        if (navLinks.classList.contains('active')) {
+            navLinks.style.display = 'flex';
+        } else {
+            // Wait for the transition to finish before setting display to none
+            setTimeout(() => {
+                if (!navLinks.classList.contains('active')) {
+                    navLinks.style.display = 'none';
+                }
+            }, 300); // Match this duration with the CSS transition duration
+        }
+    }
+
+    // Close the menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+
+        // Check if the click was outside the nav links and hamburger
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+            navLinks.classList.remove('active');
+            // Wait for the transition to finish before setting display to none
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+            }, 300); // Match this duration with the CSS transition duration
+        }
+    });
+</script> -->
 <script>
     $(document).ready(function() {
         // Smooth scrolling for all links with href starting with #
