@@ -319,82 +319,70 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- <script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        // // Automatically close the menu when toggling
-        //         if (navLinks.classList.contains('active')) {
-        //     navLinks.style.display = 'flex';
-        // } else {
-        //     navLinks.style.display = 'none';
-        // }
-    // }
-    //     // Close the menu when clicking outside of it
-    //     document.addEventListener('click', function(event) {
-    //     const navLinks = document.querySelector('.nav-links');
-    //     const hamburger = document.querySelector('.hamburger');
-
-    //     // Check if the click was outside the nav links and hamburger
-    //     if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-    //         navLinks.classList.remove('active');
-    //         navLinks.style.display = 'none';
-    //     }
-    // });
-    };
-
-    /script> -->
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-
-            // Close the menu when clicking on a nav link
-            const navItems = document.querySelectorAll('.nav-links a');
-            navItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    navLinks.style.display = 'none';
-                });
-            });
-        }
-</script>
 <script>
     function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('active');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    };
 
-        // If the menu is active, set display to flex immediately
-        if (navLinks.classList.contains('active')) {
-            navLinks.style.display = 'flex';
-        } else {
-            // Wait for the transition to finish before setting display to none
-            setTimeout(() => {
-                if (!navLinks.classList.contains('active')) {
-                    navLinks.style.display = 'none';
+    </script>
+<!-- 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+    
+            // Toggle the active class
+            navLinks.classList.toggle('active');
+    
+            // If the menu is active, set display to flex immediately
+            if (navLinks.classList.contains('active')) {
+                navLinks.style.display = 'flex';
+            } else {
+                // Wait for the transition to finish before setting display to none
+                setTimeout(() => {
+                    if (!navLinks.classList.contains('active')) {
+                        navLinks.style.display = 'none';
+                    }
+                }, 300); // Match this duration with the CSS transition duration
+            }
+        }
+    
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            const footerLinks = document.querySelectorAll('.footer-link');
+    
+            // Check if the click was outside the nav links and hamburger
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                // Check if the clicked element is not a footer link
+                if (![...footerLinks].includes(event.target)) {
+                    navLinks.classList.remove('active');
+                    // Wait for the transition to finish before setting display to none
+                    setTimeout(() => {
+                        navLinks.style.display = 'none';
+                    }, 300); // Match this duration with the CSS transition duration
                 }
-            }, 300); // Match this duration with the CSS transition duration
-        }
-    }
-
-    // Close the menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-        const navLinks = document.querySelector('.nav-links');
-        const hamburger = document.querySelector('.hamburger');
-
-        // Check if the click was outside the nav links and hamburger
-        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-            navLinks.classList.remove('active');
-            // Wait for the transition to finish before setting display to none
-            setTimeout(() => {
+            }
+        });
+    
+        // Close the menu when clicking on a nav link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('active');
                 navLinks.style.display = 'none';
-            }, 300); // Match this duration with the CSS transition duration
-        }
-    });
-</script>
+            });
+        });
+    
+        // Attach the toggleMenu function to the hamburger icon
+        document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+    </script> -->
+
+
 <!-- <script>
     $(document).ready(function() {
         // Smooth scrolling for all links with href starting with #
@@ -433,7 +421,7 @@ window.location.hash = target;
         }
     }
     
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxQqEpp4LPK_DIIaM52QzUzQ66QIk4nTR_GdmLjIFBqeppIxF5Fa-O6m4oJRszlV-N4/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy344y-uNQU_GTsGGkZ1LNwmskWBbtaI5AmCQ069Rvkn_piKZHH94eHWAAjQAkLbri9Q/exec';
     const form = document.getElementById('signupForm');
 
     // Email Validation

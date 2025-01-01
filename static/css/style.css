@@ -167,14 +167,12 @@ body {
     font-size: 1.4rem;
     padding: 12px 40px;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out; /* Set transition properties here */
     background-color: #000;
 }
 
 .hero-section .btn:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    /* ease out */
     background-color: #000;
 }
 

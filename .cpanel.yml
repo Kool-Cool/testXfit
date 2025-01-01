@@ -1,8 +1,7 @@
 # .cpanel.yml
-
 deployment:
   version: 1
-  app: myapp
+  app: mywebsite
   web:
     document_root: /public_html
     files:
@@ -11,5 +10,3 @@ deployment:
       - blog.html
       - index.html
       - mailBody.html
-
-# Additional optional deployment settings can go here
