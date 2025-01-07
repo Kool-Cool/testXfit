@@ -543,10 +543,10 @@ text-shadow: 0 0 10px rgb(234, 0, 255), 0 0 20px rgb(255, 0, 242), 0 0 30px rgb(
 }
 
 @media (max-width: 435px){
-    .navbar{
-        top: 3rem;
+    /* .navbar{
+        top: 2rem;
 
-    }
+    } */
 
     .work-in-progress{
         font-size:  0.8rem;
